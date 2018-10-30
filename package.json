@@ -1,0 +1,25 @@
+{
+  "name": "storybook-brand",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "source": "index.js",
+  "repository": "git@github.com:aganglada/storybook-brand.git",
+  "author": "aganglada <aganglada@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel ./src --out-dir ./dist",
+    "dev": "microbundle watch --jsx react"
+  },
+  "peerDependencies": {
+    "react": ">=16.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {
+    "styled-components": "3.4.10"
+  }
+}
