@@ -1,24 +1,29 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
-
-const smallSpace = css`
-  padding: 5px;
-`
-const mediumSpace = css`
-  padding: 5px;
-`
-const largeSpace = css`
-  padding: 5px;
-`
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  ${props => (props.size === 'small' ? smallSpace : null)};
-  ${props => (props.size === 'medium' ? mediumSpace : null)};
-  ${props => (props.size === 'large' ? largeSpace : null)};
+  border: 1px solid;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+`
+const Visual = styled.span`
+  height: 30px;
+  padding: 5px 10px;
+  border-right: 1px solid;
+`
+const Value = styled.span`
+  padding: 5px 10px;
 `
 
-function Space({ size = 'small', children }) {
-  return <Wrapper size={size}>{children}</Wrapper>
+function Space({ value, children }) {
+  return (
+    <Wrapper>
+      <Visual value={value}>{value}</Visual>
+      <Value>{children}</Value>
+    </Wrapper>
+  )
 }
 
 export default Space
